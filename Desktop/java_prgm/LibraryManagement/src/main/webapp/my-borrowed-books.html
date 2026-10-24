@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Borrowed Books</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background: #176b55;
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        h1 {
+            color: #176b55;
+        }
+
+        .description {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .table-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #00000012;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #176b55;
+            color: white;
+        }
+
+        tr:hover {
+            background: #f1f8f5;
+        }
+
+        .status {
+            background: #d4edda;
+            color: #155724;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 11px 18px;
+            background: #176b55;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-button:hover {
+            background: #10513f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 20px 15px;
+            }
+
+            header {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>My Library</h2>
+
+        <nav>
+            <a href="user-dashboard.html">Dashboard</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>My Borrowed Books</h1>
+
+        <p class="description">
+            View the books you have borrowed from the library.
+        </p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Book Name</th>
+                        <th>Borrow Date</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Java Programming</td>
+                        <td>15-10-2026</td>
+                        <td>29-10-2026</td>
+                        <td><span class="status">Borrowed</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>102</td>
+                        <td>Python Basics</td>
+                        <td>18-10-2026</td>
+                        <td>01-11-2026</td>
+                        <td><span class="status">Borrowed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="user-dashboard.html" class="back-button">
+            Back to Dashboard
+        </a>
+    </main>
+
+    <footer>
+        <p>Library Management System &copy; 2026</p>
+    </footer>
+
+</body>
+</html>

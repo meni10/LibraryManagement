@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book - Library Management System</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        nav {
+            background-color: #155b4d;
+            color: white;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav h2 {
+            font-size: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #b9f2d7;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .container h2 {
+            margin-bottom: 10px;
+            color: #155b4d;
+        }
+
+        .description {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        label {
+            display: block;
+            margin: 17px 0 7px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d4ddd8;
+            border-radius: 6px;
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #26836b;
+            box-shadow: 0 0 0 3px rgba(38, 131, 107, 0.1);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+            line-height: 1.5;
+        }
+
+        .form-note {
+            display: block;
+            margin-top: 6px;
+            font-size: 12px;
+            color: #78827d;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 25px;
+            background-color: #155b4d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #10483d;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #155b4d;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            nav {
+                padding: 18px 20px;
+            }
+
+            .container {
+                margin: 25px 15px;
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Library Management</h2>
+        <a href="admin-dashboard.html">Back to Dashboard</a>
+    </nav>
+
+    <div class="container">
+
+        <h2>Add New Book</h2>
+
+        <p class="description">
+            Enter the book details below to add it to the library collection.
+        </p>
+
+        <form action="addBook" method="post">
+
+            <label for="title">Book Title *</label>
+            <input type="text"
+                   id="title"
+                   name="title"
+                   placeholder="Enter book title"
+                   maxlength="200"
+                   required>
+
+            <label for="author">Author *</label>
+            <input type="text"
+                   id="author"
+                   name="author"
+                   placeholder="Enter author name"
+                   maxlength="150"
+                   required>
+
+            <label for="category">Category</label>
+            <input type="text"
+                   id="category"
+                   name="category"
+                   placeholder="e.g. Programming, Fiction, Finance"
+                   maxlength="100">
+
+            <label for="total_copies">Total Copies *</label>
+            <input type="number"
+                   id="total_copies"
+                   name="total_copies"
+                   min="1"
+                   value="1"
+                   required>
+
+            <label for="available_copies">Available Copies *</label>
+            <input type="number"
+                   id="available_copies"
+                   name="available_copies"
+                   min="0"
+                   value="1"
+                   required>
+
+            <label for="book_url">Book Cover Image URL</label>
+            <input type="url"
+                   id="book_url"
+                   name="book_url"
+                   placeholder="https://example.com/book-cover.jpg">
+
+            <label for="book_desc">Book Description</label>
+            <textarea id="book_desc"
+                      name="book_desc"
+                      placeholder="Enter a short description of the book"></textarea>
+
+            <button type="submit">Add Book</button>
+
+        </form>
+
+        <a class="back-link" href="admin-dashboard.html">
+            Back to Admin Dashboard
+        </a>
+
+    </div>
+
+</body>
+</html>

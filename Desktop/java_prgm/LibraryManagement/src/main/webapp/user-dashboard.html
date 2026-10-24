@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Library Management</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background: #176b55;
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        .welcome {
+            margin-bottom: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #00000012;
+        }
+
+        .card h3 {
+            color: #176b55;
+        }
+
+        .card a {
+            display: inline-block;
+            background: #176b55;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .card a:hover {
+            background: #10513f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>My Library</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h1>User Dashboard</h1>
+            <p>Welcome! Explore available books and borrow the books you need.</p>
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Explore Books</h3>
+                <p>View all books available in the library.</p>
+                <a href="/LibraryManagement/display">Explore Books</a>
+            </div>
+
+			<div class="card">
+			    <h3>My Borrowed Books</h3>
+			    <p>View the books you have borrowed from the library.</p>
+			    <a href="my-borrowed-books.html">View My Books</a>
+			</div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Library Management System &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
